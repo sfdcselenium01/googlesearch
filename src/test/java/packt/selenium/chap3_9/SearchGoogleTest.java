@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import packt.selenium.chap3_9.pageobjects.Google;
 import packt.selenium.chap3_9.pageobjects.GoogleSearchPage;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +22,8 @@ public class SearchGoogleTest {
 
     @Before
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
+    	driver = new ChromeDriver();
+    	//driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
